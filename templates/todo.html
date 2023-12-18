@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <div class="addtask">
+            <input type="text" id="taskInput" placeholder="Enter a task" class="form-control task-input">
+            <button onclick="addTask()" class="btn btn-task btn-outline-light" style="margin-top: 10px" onclick="addTask()">Add Task</button>
+        </div>
+
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-todo table-bordered table-light table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th class="col-3"> Action </th>
+                    <th class="col-7"> Task </th>
+                </tr>
+            </thead>
+            <tbody class="table-dark">
+                {% for work in tododata %}
+                <tr>
+                    <td>
+                        {% if work["status"] == "DONE" %}
+                        <button value="{{work['id']}}" onclick="checkTask({{work['id']}},false)" class="btn btn-undo btn-outline-light">Undo</button>
+                        <button class="btn btn-delete btn-outline-light" onclick="deleteEntry(this.value)" value="{{work['id']}}"><i class="fas fa-trash"></i></button>
+                        <td class="col-7" style="text-decoration: line-through; color:#5A5A5A;"> {{work["task"]}} </td>
+                        {% else %}
+                        <button value="{{work['id']}}" onclick="checkTask({{work['id']}},true)" class="btn btn-done btn-light"> Done </button>
+                        <button class="btn btn-delete btn-outline-light" onclick="deleteEntry(this.value)" value="{{work['id']}}"><i class="fas fa-trash"></i></button>
+                        <td class="col-7" style="text-decoration: none;"> {{work["task"]}} </td>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </tfoot>
+        </table>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='todostyles.css') }}">
+    <script src="{{ url_for('static', filename='todo.js') }}"></script>
+
+{% endblock %}

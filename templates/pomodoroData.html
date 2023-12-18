@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table table-data table-bordered table-light table-hover">
+        <h4> Completed </h4>
+        <thead class="table-dark">
+            <tr>
+                <th> Date </th>
+                <th> Time </th>
+                <th> Action </th>
+            </tr>
+        </thead>
+        <tbody class="table-dark">
+            {% for work in past %}
+            <tr>
+                <td> {{work["date"]}} </td>
+                <td> {{work["time"]}} </td>
+                <td> <button class="btn btn-delete btn-outline-light" onclick="deleteEntry(this.value)" value="{{work['id']}}">Delete</button> </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </tfoot>
+    </table>
+</div>

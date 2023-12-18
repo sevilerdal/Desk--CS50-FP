@@ -1,0 +1,9 @@
+All audio used in this project is downloaded from Pixabay.
+They are free for use under the Pixabay Content License.
+
+You can learn more about Pixabay Content License here:
+https://pixabay.com/service/license-summary/
+
+Only tick.mp3 is edited to make file smaller.
+Audacity is used to trim the audio.
+Audacity is an open source app.

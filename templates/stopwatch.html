@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+
+    <div class="row">
+        <h3>Stopwatch</h3>
+        <div class="col col-swch">
+            <div class="input-group mb-3">
+                <input type="text" id="work-input" class="work-input" placeholder="What are you working on?">
+                <div id="edit-group" style="display:none;">
+                    <h5>Edit</h5>
+                    <input type="text" class="work-input" id="set-task" placeholder="Task">
+                    <input type="text" class="work-input" id="set-dur" placeholder="Duration (hh:mm:ss)">
+                    <p><button id="btn-set" class="btn btn-set btn-outline-light" onclick="validateTimeFormat(this)">Set</button></p>
+                </div>
+            </div>
+            <div class="stwch container">
+                <div class="stwch swch-hour">00</div>
+                <div class="stwch swch-minute">00</div>
+                <div class="stwch swch-second">00</div>
+            </div>
+            <!--BUTTONS-->
+            <div class="container">
+                <button class="btn swch-start btn-lg" id="swchStartBtn" onclick="startTimer()"> Start </button>
+                <button class="btn swch-pause btn-lg" id="swchPauseBtn" onclick="pauseTimer()"> Pause </button>
+                <button class="btn swch-stop btn-lg" id="swchStopBtn" onclick="stopTimer()"> Stop </button>
+            </div>
+            <audio id="audio-end" src="{{ url_for('static', filename='audio/end.mp3') }}"></audio>
+            <audio id="audio-start" src="{{ url_for('static', filename='audio/start.mp3') }}"></audio>
+        </div>
+        <div class="col"> Previous Sessions
+            {% block col %}
+            {% include "swchData.html" %}
+            {% endblock %}
+        </div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stopwatchstyles.css') }}">
+    <script src="{{ url_for('static', filename='stopwatch.js') }}"></script>
+
+{% endblock %}

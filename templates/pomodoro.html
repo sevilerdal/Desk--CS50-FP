@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+    <div class="row">
+        <div class="col">
+            <!--REMAINING TIME DISPLAY-->
+            <div class="rem container"> Remaining Time
+                <div class="rem rem-minute">00</div>
+                <div class="rem rem-second">00</div>
+
+            </div>
+        </div>
+
+        <div class="col">
+            <h3 id="pom-title"> Pomodoro Timer </h3>
+            <!--CLOCK-->
+            <div class="container-fluid">
+                <div class="clock">
+                    <div class="clock-face">
+                        <div class="center"></div>
+                        <div class="hand minute-hand"></div>
+                        <div class="hand second-hand"></div>
+                        <!-- Numbers of clock -->
+                        <div class="number number-0">0</div>
+                        <div class="number number-1">5</div>
+                        <div class="number number-2">10</div>
+                        <div class="number number-3">15</div>
+                        <div class="number number-4">20</div>
+                        <div class="number number-5">25</div>
+                        <div class="number number-6">30</div>
+                        <div class="number number-7">35</div>
+                        <div class="number number-8">40</div>
+                        <div class="number number-9">45</div>
+                        <div class="number number-10">50</div>
+                        <div class="number number-11">55</div>
+                    </div>
+                </div>
+                <audio id="audio-end" src="{{ url_for('static', filename='audio/end.mp3') }}"></audio>
+                <audio id="audio-start" src="{{ url_for('static', filename='audio/start.mp3') }}"></audio>
+                <audio id="audio-tick" src="{{ url_for('static', filename='audio/tick.mp3') }}"></audio>
+            </div>
+            <!--BUTTONS-->
+            <div class="container-fluid">
+                <button class="btn btn-start btn-lg" id="toggleButton" onclick="togglePomodoro(0.1)"> Start </button> <!--TODO CHANGE TEST VALUES-->
+                <button class="btn btn-stop btn-lg" id="toggleButton" onclick="stopPomodoro()"> Stop </button>
+                <button class="btn btn-break btn-lg" id="toggleButton" onclick="startBreak()"> Start Break </button>
+            </div>
+        </div>
+
+        <div class="col">
+            {% block col %}
+            {% include "pomodoroData.html" %}
+            {% endblock %}
+        </div>
+    </div>
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pomodorostyles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='buttonstyles.css') }}">
+    <script src="{{ url_for('static', filename='pomodoro.js') }}"></script>
+
+{% endblock %}

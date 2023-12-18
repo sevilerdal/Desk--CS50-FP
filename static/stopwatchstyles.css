@@ -1,0 +1,89 @@
+
+.col-swch {
+    height: 100%;
+}
+.inp-edit {
+    border-radius: 0;
+    color: #D3D3D3;
+    background-color: rgba(0,0,0,0.7);
+    margin: 2px;
+}
+.work-input {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 25%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #D3D3D3;
+    background-color: rgba(0,0,0,0.7);
+}
+.work-input:hover {
+    background-color: rgba(26,26,26,0.9);
+}
+
+/* Time text style */
+.swch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background: transparent;
+    color: #CCCCCC;
+    position: relative;
+}
+.swch-minute, .swch-second, .swch-hour {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin: 10px auto;
+    border-radius: 15%;
+    overflow: hidden;
+    font-size: 50px;
+    background-color: rgba(0,0,0, 0.3);
+    text-align: center;
+}
+/* Button style*/
+
+.btn {
+    margin-top: 20px;
+    border-radius: 0;
+}
+.btn-delete, .btn-edit {
+    margin: 0;
+    border-radius: 10px;
+    border: dashed 0.5px;
+}
+.swch-start {
+    background: #AEFF8B;
+}
+.swch-start:hover {
+    background: #8EFF5E;
+}
+.swch-pause {
+    background: #FFFB75;
+}
+.swch-pause:hover {
+    background: #FFF948;
+}
+.swch-stop {
+    background: #FFAA8B;
+}
+.swch-stop:hover {
+    background: #FF8053;
+}
+.swch-start:hover,
+.swch-pause:hover,
+.swch-stop:hover {
+    box-shadow: inset 2px 2px 1px 2px rgba(0,0,0, 0.5);
+
+}
+.swch-start:focus,
+.swch-pause:focus,
+.swch-stop:focus {
+    box-shadow: none;
+}
+.swch-start:focus:hover,
+.swch-stop:focus:hover,
+.swch-pause:focus:hover {
+    box-shadow: inset 2px 2px 1px 2px rgba(0,0,0, 0.5);
+}

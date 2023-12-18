@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table class="table table-data table-bordered table-light table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th> Task </th>
+                <th> Duration </th>
+                <th> Date </th>
+                <th> Time </th>
+                <th> Action </th>
+            </tr>
+        </thead>
+        <tbody class="table-dark">
+            {% for work in timerdata %}
+            <tr>
+                <td> {{work["task"]}} </td>
+                <td> {{work["duration"]}} </td>
+                <td> {{work["date"]}} </td>
+                <td> {{work["time"]}} </td>
+                <td>
+                    <button class="btn btn-delete btn-outline-light" onclick="deleteEntry(this.value)" value="{{work['id']}}">Delete</button>
+                    <button class="btn btn-edit btn-outline-light" onclick="editEntry(this,this.value)" value="{{work['id']}}">Edit</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </tfoot>
+    </table>
+</div>

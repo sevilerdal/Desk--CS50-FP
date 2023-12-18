@@ -1,0 +1,46 @@
+/* Button style*/
+.btn {
+    margin-top: 30px;
+    border-radius: 0;
+}
+.btn-delete {
+    margin: 0;
+    border-radius: 10px;
+    border: dashed 0.5px;
+}
+.btn-outline-light {
+    margin: 3px;
+}
+.btn-start {
+    background: #AEFF8B;
+    outline:none;
+}
+.btn-start:hover {
+    background: #8EFF5E;
+    box-shadow: inset 2px 2px 1px 2px rgba(0,0,0, 0.5);
+}
+.btn-break {
+    background: #D79DFF;
+    outline:none;
+    display: none;
+}
+.btn-break:hover {
+    background: #A21AFF;
+    color: #DED3CB;
+    box-shadow: inset 2px 2px 1px 2px rgba(0,0,0, 0.5);
+    box-shadow: 0 0 8px 10px rgba(162,26,255, 0.5);
+}
+.btn-start:focus {
+    box-shadow: none;
+}
+.btn-start:focus:hover {
+    box-shadow: inset 2px 2px 1px 2px rgba(0,0,0, 0.5);
+}
+.btn-stop {
+    display: none;
+    background: #FFAA8B;
+}
+.btn-stop:hover {
+    background: #FF8053;
+    box-shadow: inset 2px 2px 1px 2px rgba(0,0,0, 0.5);
+}

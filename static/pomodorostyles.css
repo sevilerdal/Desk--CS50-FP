@@ -1,0 +1,160 @@
+/* Clock stlye */
+.clock {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 10px solid #393939;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.clock-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    border-radius: 50%;
+    background-color: #181818;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFB55E;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-shadow: 2px 2px 0 1px rgba(0,0,0,0.5);
+}
+
+.hand {
+    position: absolute;
+    background: #354C60;
+    left: 49%;
+    transform-origin: 50% 100%;
+    background: linear-gradient(90deg, #b3b3b3, #999, #b3b3b3);
+}
+
+.minute-hand {
+    width: 6px;
+    height: 35%;
+    top: 15%;
+    border: 0.7px solid #666;
+    box-shadow: 2px -1px 0 1px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease-in-out;
+}
+
+.second-hand {
+    width: 2px;
+    height: 38%;
+    top: 10%;
+    box-shadow: -2px -1px 1px 0.3px rgba(0,0,0,0.5);
+    transition: transform 0.5s ease-in-out;
+
+}
+/* Time text style */
+
+.rem {
+    height: 100%;
+    display: block;
+    justify-content: center;
+    width: 50%;
+    background: transparent;
+    color: #CCCCCC;
+    position: relative;
+}
+.rem-minute, .rem-second {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    margin: 10px auto;
+    border-radius: 15%;
+    overflow: hidden;
+    font-size: 50px;
+    background-color: rgba(0,0,0, 0.3);
+    text-align: center;
+}
+
+/* Clock number styles and positioning */
+.number {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: #DED3CB;
+    background:#2e2e2e;
+    border-radius:50%;
+    width: 10%;
+    height: 10%;
+    z-index: -10;
+    opacity: 0.9;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.number-1 {
+    top: 15%;
+    right: 23%;
+    transform: translateY(-50%);
+}
+
+.number-2 {
+    top: 25%;
+    right: 8%;
+}
+.number-3 {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+.number-4 {
+    bottom: 23%;
+    right: 8%;
+}
+.number-5 {
+    bottom: 5%;
+    right: 24%;
+    transform: translateY(-50%);
+}
+.number-6 {
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.number-7 {
+    bottom: 5%;
+    left: 24%;
+    transform: translateY(-50%);
+}
+.number-8 {
+    bottom: 23%;
+    left: 8%;
+}
+.number-9 {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+.number-10 {
+    top: 25%;
+    left: 8%;
+}
+.number-11 {
+    top: 15%;
+    left: 23%;
+    transform: translateY(-50%);
+}
+.number-0 {
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+table {
+    font-size: 18px;
+}

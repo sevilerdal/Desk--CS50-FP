@@ -1,0 +1,93 @@
+.label-feat {
+    background: #D295FF;
+    color: black;
+    border-radius: 0 10px 0;
+    padding: 10px;
+    margin: 8px 4px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.8) inset;
+}
+.ul-feature {
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ul-feature li {
+    background: #FFC151;
+    color: black;
+    border-radius: 0 10px 0;
+    padding: 10px;
+    margin: 8px 4px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.8) inset;
+}
+.ul-feature li:hover {
+    background: #FFCFAA;
+} 
+
+/* Lamp */
+.desk-lamp {
+    width: 120px;
+    height: 180px;
+    left: 45%;
+    position: relative;
+}
+
+.lamp-base {
+    width: 60px;
+    height: 20px;
+    background-color: #A2A2A2; /* Lamp base color */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-arm {
+    width: 10px;
+    height: 100px;
+    justify-content: center;
+    display:flex;
+    background-color: #333; /* Lamp arm color */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lamp-head {
+    width: 120px;
+    height: 70px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: -40%;
+    clip-path: polygon(25% 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+.lamp-light {
+    width: 15px;
+    height: 15px;
+    background-color: #ffff00; /* Lamp light color */
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px 10px rgba(255,255,0,1); /* Glow effect */
+    z-index: -1;
+    animation: light 1.5s linear 3;
+}
+@keyframes light {
+    0%, 100% {
+        box-shadow: 0 0 10px 10px rgba(255,255,0,1);
+    }
+    50% {
+        box-shadow: 0 0 20px 20px rgba(255,255,0,1);
+    }
+    100% {
+        box-shadow: 0 0 10px 10px rgba(255,255,0,1);
+    }
+}
+

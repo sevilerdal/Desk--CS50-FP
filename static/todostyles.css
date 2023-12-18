@@ -1,0 +1,35 @@
+
+.addtask {
+    justify-content: center;
+    align-items: baseline;
+    display: flex;
+    font-size: 0;
+}
+.task-input{
+    height:40px;
+    background: #575757;
+    border: none;
+    border-radius: 0;
+    width: 40%;
+}
+.task-input:focus {
+    background: #161820;
+    color: #ededed;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.3)
+}
+
+.task-input::placeholder {
+    color: #CCCCCC;
+}
+
+.btn-task {
+    background: #2B2E36;
+    height: 40px;
+    margin-left: 0;
+    border: none;
+    border-radius: 0;
+}
+table {
+    margin-top: 20px;
+}
