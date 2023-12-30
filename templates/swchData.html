@@ -18,7 +18,7 @@
                 <td> {{work["time"]}} </td>
                 <td>
                     <button class="btn btn-delete btn-outline-light" onclick="deleteEntry(this.value)" value="{{work['id']}}">Delete</button>
-                    <button class="btn btn-edit btn-outline-light" onclick="editEntry(this,this.value)" value="{{work['id']}}">Edit</button>
+                    <button class="btn btn-edit btn-outline-light" onclick="editEntry(this)" value="{{work['id']}}">Edit</button>
                 </td>
             </tr>
             {% endfor %}

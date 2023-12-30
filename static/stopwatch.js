@@ -77,7 +77,7 @@ function stopTimer() {
             headers: {
                 "Content-Type": "application/json" // Content type to send
             },
-            body: JSON.stringify(timedata) // Send the word "WRITE"
+            body: JSON.stringify(timedata)
         })
         .then(response => response.json())
         .then(data => {
@@ -172,8 +172,8 @@ function updateData(data) {
                 <td>${work.duration}</td>
                 <td>${work.date}</td>
                 <td>${work.time}</td>
-                <td><button class="btn btn-outline-light" onclick="deleteEntry(${work.id})">Delete</button>
-                <button class="btn btn-outline-light" onclick="updateEntry(this.value)" value="{{work['id']}}">Edit</button></td>
+                <td><button class="btn btn-delete btn-outline-light" onclick="deleteEntry(${work.id})">Delete</button>
+                <button class="btn btn-edit btn-outline-light" onclick="editEntry(this)" value=${work.id}>Edit</button></td>
             `;
             tableBody.appendChild(newRow);
         });

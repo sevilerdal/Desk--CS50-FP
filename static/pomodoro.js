@@ -124,7 +124,7 @@ function stopPomodoro() {
 
 
 function startBreak() {
-    togglePomodoro(0.15); // TODO: CHANGE TEST VALUES
+    togglePomodoro(5); 
     breakbutton.style.display = "none";
     onBreak = true;
     title.textContent = "On break . . .";

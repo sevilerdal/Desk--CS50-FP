@@ -72,6 +72,7 @@ def stopwatch():
                         text,
                         task["time"],
             )
+            print(swchDB())
             return jsonify(timerdata=swchDB())
 
         # Update existing entry
@@ -100,15 +101,15 @@ def swchDB():
 def todo():
     if request.method == "POST":
         task = request.get_json()
-        if task["action"] == "WRITE":
+        if task["action"] == "WRITE": # Add new entry to DB
             db.execute("INSERT INTO todo(task, status) VALUES(?,?);", task["text"], task["status"])
             return jsonify(tododata=todoDB())
-        elif task["action"] == "EDIT":
+        elif task["action"] == "EDIT": # Edit selected entry
             print(f"task : {task}, {datetime.datetime.now()}")
             status = "DONE" if task["status"] else ""
             db.execute("UPDATE todo SET status = ? WHERE id = ?;", status, task["id"])
             return jsonify(tododata=todoDB())
-        else:
+        else: # Delete selected entry
             db.execute("DELETE FROM todo WHERE id = ?", task["id"])
             return jsonify(tododata=todoDB())
     else:
